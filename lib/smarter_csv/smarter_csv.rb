@@ -15,7 +15,7 @@ module SmarterCSV
     old_row_sep = $/
     begin
       $/ = options[:row_sep]
-      f = File.open(filename, "r")
+      f = File.open(filename, "r:windows-1252")
 
       if options[:headers_in_file]        # extract the header line
         # process the header line in the CSV file..
